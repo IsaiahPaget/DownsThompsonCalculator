@@ -1,0 +1,10 @@
+version: '3.9'
+
+services:
+  frontend:
+    build:
+      context: . # Set the context to the directory containing your Dockerfile 
+      dockerfile: ./Dockerfile  # Use the correct Dockerfile name
+    restart: unless-stopped
+    ports:
+      - "8080:80"  # Map port 80 of the container to port 8080 on the host
